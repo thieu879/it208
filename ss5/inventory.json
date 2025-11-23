@@ -1,0 +1,32 @@
+[
+    {
+        "product_id": 1,
+        "name": "Sản phẩm A",
+        "quantity": 5,
+        "price": 100000
+    },
+    {
+        "product_id": 2,
+        "name": "Sản phẩm B",
+        "quantity": 3,
+        "price": 200000
+    },
+    {
+        "product_id": 3,
+        "name": "Sản phẩm C",
+        "quantity": 7,
+        "price": 120000
+    },
+    {
+        "product_id": 4,
+        "name": "Sản phẩm mới",
+        "quantity": 10,
+        "price": 150000
+    },
+    {
+        "product_id": 4,
+        "name": "Sản phẩm mới",
+        "quantity": 10,
+        "price": 150000
+    }
+]
