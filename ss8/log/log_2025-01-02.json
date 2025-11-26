@@ -1,0 +1,17 @@
+[
+  {
+    "user": "A",
+    "action": "edit",
+    "duration": 15
+  },
+  {
+    "user": "B",
+    "action": "login",
+    "duration": 3
+  },
+  {
+    "user": "D",
+    "action": "delete",
+    "duration": 8
+  }
+]
