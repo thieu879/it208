@@ -1,0 +1,9 @@
+id,ten,diem_toan,diem_ly,diem_hoa,diem_tb,xep_loai
+SV001,Nguyễn Văn A,8.5,7.0,9.0,8.17,Giỏi
+SV002,Trần Thị B,7.0,6.5,7.5,7.0,Khá
+SV003,Phạm Văn C,5.5,5.0,5.5,5.33,Trung Bình
+SV004,Hoàng Thị D,9.0,8.5,9.5,9.0,Giỏi
+SV005,Lê Văn E,6.0,6.0,6.0,6.0,Khá
+SV006,Võ Thị F,4.5,4.0,4.5,4.33,Yếu
+SV007,Đặng Văn G,8.0,8.5,8.0,8.17,Giỏi
+SV008,Bùi Thị H,5.5,6.0,5.5,5.67,Trung Bình
