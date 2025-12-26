@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Định nghĩa 2 nhóm: Training User và Manager -->
+    <record id="group_training_user" model="res.groups">
+        <field name="name">Nhân viên giáo vụ</field>
+    </record>
+
+    <record id="group_training_manager" model="res.groups">
+        <field name="name">Quản lý trung tâm</field>
+    </record>
+
+</odoo>

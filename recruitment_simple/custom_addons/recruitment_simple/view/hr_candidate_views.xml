@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View -->
+        <record id="view_hr_candidate_form" model="ir.ui.view">
+            <field name="name">hr.candidate.form</field>
+            <field name="model">hr.candidate</field>
+            <field name="arch" type="xml">
+                <form string="Hồ sơ ứng viên">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="gender" />
+                                <field name="birth_date" />
+                                <field name="phone" />
+                                <field name="email" />
+                            </group>
+                            <group>
+                                <field name="position_applied" />
+                                <field name="expected_salary" />
+                                <field name="application_date" />
+                                <field name="cv_file" filename="cv_filename" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="address" />
+                        </group>
+                        <group>
+                            <field name="manager_note" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_hr_candidate_tree" model="ir.ui.view">
+            <field name="name">hr.candidate.tree</field>
+            <field name="model">hr.candidate</field>
+            <field name="arch" type="xml">
+                <tree string="Danh sách ứng viên">
+                    <field name="name" />
+                    <field name="gender" />
+                    <field name="birth_date" />
+                    <field name="position_applied" />
+                    <field name="expected_salary" />
+                    <field name="application_date" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_hr_candidate_search" model="ir.ui.view">
+            <field name="name">hr.candidate.search</field>
+            <field name="model">hr.candidate</field>
+            <field name="arch" type="xml">
+                <search string="Tìm kiếm ứng viên">
+                    <field name="name" />
+                    <field name="position_applied" />
+                    <filter name="male" string="Nam" domain="[('gender', '=', 'male')]" />
+                    <filter name="female" string="Nữ" domain="[('gender', '=', 'female')]" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_hr_candidate" model="ir.actions.act_window">
+            <field name="name">Ứng viên</field>
+            <field name="res_model">hr.candidate</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Tạo hồ sơ ứng viên đầu tiên
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="menu_recruitment_root"
+            name="Danh sách ứng viên"
+            sequence="10" />
+
+        <menuitem id="menu_hr_candidate"
+            name="Ứng viên"
+            parent="menu_recruitment_root"
+            action="action_hr_candidate"
+            sequence="10" />
+
+    </data>
+</odoo>

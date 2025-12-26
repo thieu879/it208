@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_training_subject_manager,training.subject - Manager,model_training_subject,group_training_manager,1,1,1,1
+access_training_subject_user,training.subject - User,model_training_subject,group_training_user,1,1,1,0
+access_training_teacher_manager,training.teacher - Manager,model_training_teacher,group_training_manager,1,1,1,1
+access_training_teacher_user,training.teacher - User,model_training_teacher,group_training_user,1,1,1,1
+access_training_student_manager,training.student - Manager,model_training_student,group_training_manager,1,1,1,1
+access_training_student_user,training.student - User,model_training_student,group_training_user,1,1,1,1
+access_training_session_manager,training.session - Manager,model_training_session,group_training_manager,1,1,1,1
+access_training_session_user,training.session - User,model_training_session,group_training_user,1,1,1,1
+access_training_class_manager,training.class - Manager,model_training_class,group_training_manager,1,1,1,1
+access_training_class_user,training.class - User,model_training_class,group_training_user,1,1,1,0

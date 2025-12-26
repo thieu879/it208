@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Record Rule: Training User chỉ thấy lớp draft hoặc open -->
+    <record id="rule_training_class_user_see_active" model="ir.rule">
+        <field name="name">Lớp học - User chỉ thấy draft/open</field>
+        <field name="model_id" ref="model_training_class"/>
+        <field name="groups" eval="[(4, ref('group_training_user'))]"/>
+        <field name="domain_force">[('|'), ('state', '=', 'draft'), ('state', '=', 'open')]</field>
+    </record>
+
+</odoo>

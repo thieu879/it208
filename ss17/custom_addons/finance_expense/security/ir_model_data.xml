@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <record id="model_finance_expense_finance_expense" model="ir.model">
+            <field name="name">Finance Expense</field>
+            <field name="model">finance.expense</field>
+        </record>
+    </data>
+</odoo>

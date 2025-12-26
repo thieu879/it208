@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Category: Recruitment -->
+        <record id="module_category_recruitment" model="ir.module.category">
+            <field name="name">Recruitment</field>
+            <field name="description">Quản lý tuyển dụng</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Group: Customer -->
+        <record id="group_hr_customer" model="res.groups">
+            <field name="name">Customer</field>
+            <field name="category_id" ref="module_category_recruitment" />
+            <field name="comment">Khách hàng - Chỉ được xem danh sách ứng viên</field>
+        </record>
+
+        <!-- Group: Recruiter -->
+        <record id="group_hr_recruiter" model="res.groups">
+            <field name="name">Recruiter</field>
+            <field name="category_id" ref="module_category_recruitment" />
+            <field name="implied_ids" eval="[(4, ref('group_hr_customer'))]" />
+            <field name="comment">Tuyển dụng viên - Được tạo, sửa. Chỉ thấy ứng viên do mình phụ
+                trách</field>
+        </record>
+
+        <!-- Group: Manager -->
+        <record id="group_hr_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_category_recruitment" />
+            <field name="implied_ids" eval="[(4, ref('group_hr_recruiter'))]" />
+            <field name="comment">Quản lý - Full quyền, thấy tất cả ứng viên</field>
+        </record>
+    </data>
+</odoo>

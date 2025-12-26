@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="hr_candidate_tree_view" model="ir.ui.view">
+      <field name="name">name.tree</field>
+      <field name="model">hr.candidate</field>
+      <field name="arch" type="xml">
+        <tree string="Danh sách lớp k23" decoration-success="is_hired == True">
+          <field name="name" string="tên"></field>
+          <field name="gender" string="giới tính"></field>
+          <field name="birthday" string="ngày sinh"></field>
+          <field name="is_hired" string="Đã tuyển?"></field>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

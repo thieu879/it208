@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="market_record_rule" model="ir.rule">
+            <field name="name">Maketing Rule</field>
+            <field name="model_id" ref="model_estate_property" />
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('real_estate.group_estate_marketing'))]" />
+        </record>
+    </data>
+</odoo>

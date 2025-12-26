@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  
+  <!-- Action cho library.book -->
+  <record id="action_library_book" model="ir.actions.act_window">
+    <field name="name">Tất cả đầu sách</field>
+    <field name="res_model">library.book</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Chưa có sách nào. Hãy tạo đầu sách mới!
+      </p>
+    </field>
+  </record>
+
+  <!-- Action cho library.category -->
+  <record id="action_library_category" model="ir.actions.act_window">
+    <field name="name">Thể loại sách</field>
+    <field name="res_model">library.category</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <!-- Action cho library.author -->
+  <record id="action_library_author" model="ir.actions.act_window">
+    <field name="name">Tác giả</field>
+    <field name="res_model">library.author</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <!-- Action cho library.loan -->
+  <record id="action_library_loan" model="ir.actions.act_window">
+    <field name="name">Lịch sử mượn</field>
+    <field name="res_model">library.loan</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  
+  <!-- Menu chính -->
+  <menuitem id="menu_library_root" name="Thư viện" sequence="10"/>
+
+  <!-- Menu con - Quản lý Sách -->
+  <menuitem id="menu_library_book" name="Quản lý Sách" parent="menu_library_root" sequence="1" action="action_library_book"/>
+
+  <!-- Menu phụ - Cấu hình -->
+  <menuitem id="menu_library_config" name="Cấu hình" parent="menu_library_root" sequence="100"/>
+  
+  <!-- Menu cấu hình: Thể loại -->
+  <menuitem id="menu_library_category" name="Thể loại sách" parent="menu_library_config" action="action_library_category" sequence="1"/>
+  
+  <!-- Menu cấu hình: Tác giả -->
+  <menuitem id="menu_library_author" name="Tác giả" parent="menu_library_config" action="action_library_author" sequence="2"/>
+  
+  <!-- Menu cấu hình: Lịch sử mượn -->
+  <menuitem id="menu_library_loan" name="Lịch sử mượn" parent="menu_library_root" action="action_library_loan" sequence="2"/>
+
+</odoo>
